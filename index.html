@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 11</title>
+
+        <script src ="js/tabela.js"></script>
+        <script src="css/style.css"></script>
+        </script>
+        <style>
+            #dfPessoas{
+                font: 14px verdana;
+                margin-left: 35%;
+                margin-top: 150px;
+            }
+            #dtPessoas{
+                font: 14px verdana;
+                margin-left: 25px;
+                
+            }
+            table tr td {
+                width: 140px;
+            }
+            
+            header {
+            background-color: #59429d;
+            padding: 10px;
+            color: #F0F8FF;
+            text-align: center;
+             }
+            .botao {
+            border: 0px;
+            padding: 10px;
+            outline: 0;
+            background-color: #59429d;
+            color: #F0F8FF;
+            border-radius: 3px;
+            font-weight: bold;
+            transition: all ease 0.3s;
+            }
+            table, th, td {
+            border: 1px solid black;
+            width: 85%;
+            }    
+            table th {
+             background-color: rgb(214, 214, 214);
+            }
+
+            table th, td {
+            padding: 1px 5px;
+            text-align: left;
+            }
+        </style>
+
+    </head>
+    <body>
+        <header>
+        <h1>Cadastro de pessoas</h1>
+    </header>
+        <div>
+            
+            <form id="dfPessoas">
+                <label>nome:</label><br />
+                <input type="text" name="txtNome" /><br />
+                <label>idade:</label><br />
+                <input type="number" name="txtIdade" /><br /><br />
+                <input type="button" class="botao" value="Salvar" onclick="cadastroPessoa(txtNome.value, txtIdade.value)"></button> 
+               <input type="button" class="botao" value="aleterar pessoa" onclick="altPessoa(txtNome.value, txtIdade.value)"></button> 
+              <input type="button" class="botao" value="deletar pessoa" onclick="delRegistro(txtNome.value, txtIdade.value)"></button> 
+
+            </form>
+
+        </div>
+        
+        <br /><br />
+        <div class="content" id="dtPessoas">
+            <table id="tbPessoas">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Nome</td>
+                        <td>Idade</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </body>
+</html>
